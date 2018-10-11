@@ -1,3 +1,4 @@
+ifneq ($(USE_AOSP_IMS_COMMON),true)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -16,3 +17,4 @@ include $(BUILD_STATIC_JAVA_LIBRARY)
 # Include subdirectory makefiles
 # ============================================================
 include $(call all-makefiles-under,$(LOCAL_PATH))
+endif
