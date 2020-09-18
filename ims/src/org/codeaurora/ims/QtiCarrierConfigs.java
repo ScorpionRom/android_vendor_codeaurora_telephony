@@ -1,4 +1,4 @@
-/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2016, 2020 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -128,4 +128,16 @@ public class QtiCarrierConfigs {
      */
     public static final String KEY_CARRIER_CANCEL_MODIFY_CALL_SUPPORTED =
             "support_cancel_modify_call";
+
+    /* Config to determine if carrier supports accepting MT video call as one way
+     * true if user can accept MT video call as one way else false
+     */
+    public static final String ALLOW_ONE_WAY_ACCEPT_FOR_VIDEO_CALL =
+            "allow_one_way_accept_video_call";
+
+    /* Config to determine if Carrier supports call composer
+     * true - if call composer is support else false
+     */
+    public static final String KEY_CARRIER_CALL_COMPOSER_SUPPORTED =
+            "carrier_call_composer_supported_bool";
 }

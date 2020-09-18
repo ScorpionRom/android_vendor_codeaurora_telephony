@@ -157,6 +157,19 @@ public abstract class QtiImsExtBase {
         public void setAnswerExtras(int phoneId, Bundle extras) {
             onSetAnswerExtras(phoneId, extras);
         }
+
+        @Override
+        public void setCallBarring(int phoneId, boolean operationType, String facilityType,
+                String[] cbNumListInfo, String password, int serviceClass,
+                IQtiImsExtListener listener) {
+            onSetCallBarring(phoneId, operationType, facilityType, cbNumListInfo, password,
+                    serviceClass, listener);
+        }
+
+        @Override
+        public boolean isCallComposerEnabled(int phoneId) {
+            return onIsCallComposerEnabled(phoneId);
+        }
     };
 
     private QtiImsExtBinder mQtiImsExtBinder;
@@ -249,5 +262,17 @@ public abstract class QtiImsExtBase {
     }
     protected void onSetAnswerExtras(int phoneId, Bundle extras) {
         // no-op
+    }
+    /**
+     * To activate/deactive the call barring request with password.
+     */
+    protected void onSetCallBarring(int phoneId, boolean operationType, String facilityType,
+            String[] cbNumListInfo, String password, int serviceClass,
+            IQtiImsExtListener listener) {
+        // no-op
+    }
+    protected boolean onIsCallComposerEnabled(int phoneId) {
+        // no-op
+        return false;
     }
 }
