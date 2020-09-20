@@ -235,13 +235,6 @@ public class QtiCallConstants {
     public static final int VOWIFI_QUALITY_FAIR = 2;
     public static final int VOWIFI_QUALITY_POOR = 4;
 
-    /**
-     * Extra indicating the conference support from lower layers
-     * <p>
-     * Type: boolean (true if conference is supported else false)
-     */
-    public static final String CONF_SUPPORT_IND_EXTRA_KEY = "ConfSupportInd";
-
     public static final String EXTRA_PHONE_ID = "phoneId";
 
     //holds the call fail cause because of which redial is attempted
@@ -329,21 +322,9 @@ public class QtiCallConstants {
     public static final int AUTO_REJECT_CALL_ENABLED = 1;
     // Auto reject call UI item, avoid conflicting values from ImsCallUtils.ConfigItem
     public static final int AUTO_REJECT_CALL_MODE = 1000;
-    /**
-     * Constants used by clients as part of registration status change indication.
-     * Below constants will be notified when modem is unable to get the geo location information.
-     */
-    // This error will be sent when time out received to get the Longitude and Latitude
-    // from GPS engine.
-    public static final int REG_ERROR_GEO_LOCATION_STATUS_TIMEOUT = 2000;
-    // This error will be sent when modem is able to get the Longitude, Latitude and unable to
-    // get the information (country, country code, postal code etc.) from telephony.
-    public static final int REG_ERROR_GEO_LOCATION_STATUS_NO_CIVIC_ADDRESS = 2001;
-    // This error will be received if GPS is disabled from UI.
-    public static final int REG_ERROR_GEO_LOCATION_STATUS_ENGINE_LOCK = 2002;
-    // This is success case, received when all the GPS errors are resolved.
-    public static final int REG_ERROR_GEO_LOCATION_STATUS_RESOLVED = 2003;
-
+    public static final int QTI_CONFIG_SMS_APP = 1001;
+    public static final int QTI_CONFIG_VVM_APP = 1002;
+    public static final int QTI_CONFIG_VOWIFI_ROAMING_MODE_PREFERENCE = 1003;
     public static final int CALL_COMPOSER_MODE = 1004;
 
     /**
@@ -353,7 +334,7 @@ public class QtiCallConstants {
     public static final String ACTION_CALL_COMPOSER_INFO =
             "org.codeaurora.intent.action.CALL_COMPOSER_INFO";
     // set for MT call composer call (unique ID to match each call)
-    // Type: String
+    // Type: int
     public static String EXTRA_CALL_COMPOSER_TOKEN = "call_composer_token";
 
     // set for MT call composer call (only set when the call has ended)
@@ -400,5 +381,18 @@ public class QtiCallConstants {
     public static final int CALL_COMPOSER_DISABLED = 0;
     public static final int CALL_COMPOSER_ENABLED = 1;
 
+    /**
+     * Constants used by clients as part of registration status change indication.
+     * Below constants will be notified when modem is unable to get the geo location information.
+     */
+    // This error will be sent when time out received to get the Longitude and Latitude
+    // from GPS engine.
+    public static final int REG_ERROR_GEO_LOCATION_STATUS_TIMEOUT = 2000;
+    // This error will be sent when modem is able to get the Longitude, Latitude and unable to
+    // get the information (country, country code, postal code etc.) from telephony.
+    public static final int REG_ERROR_GEO_LOCATION_STATUS_NO_CIVIC_ADDRESS = 2001;
+    // This error will be received if GPS is disabled from UI.
+    public static final int REG_ERROR_GEO_LOCATION_STATUS_ENGINE_LOCK = 2002;
+    // This is success case, received when all the GPS errors are resolved.
+    public static final int REG_ERROR_GEO_LOCATION_STATUS_RESOLVED = 2003;
 }
-
